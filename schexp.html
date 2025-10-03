@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Scholarship & DBT Awareness</title>
+  <style>
+    :root {
+      --primary: #0b78d1;
+      --secondary: #28a745;
+      --bg: #f0f8ff;
+      --card-bg: #ffffff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeInDown 1.5s ease;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: .5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      transition: transform .3s ease, box-shadow .3s ease;
+      animation: fadeInUp 1s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+    h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    .lang-select {
+      margin: 20px 0;
+      text-align: center;
+    }
+    select {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--primary);
+      color: white;
+      margin-top: 20px;
+    }
+    .card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+.card h2 {
+  color: #0b78d1;
+  margin-bottom: 10px;
+}
+.card p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.scholarship-details summary {
+  display: inline-block;
+  background: linear-gradient(135deg, #0b78d1, #28a745);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.scholarship-details summary:hover {
+  background: linear-gradient(135deg, #28a745, #0b78d1);
+}
+.scholarship-details ul {
+  margin-top: 15px;
+  padding-left: 20px;
+  animation: fadeIn 0.5s ease;
+}
+.scholarship-details ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+ #scholarship-apply { margin-top:16px; }
+    .apply-btn {
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:600;
+      border:1px solid #2b6cb0;
+      background:rgba(43,108,176,0.06);
+      color:#0b4a76;
+    }
+    .apply-btn:hover { box-shadow:0 4px 10px rgba(11,74,118,0.08); transform:translateY(-1px); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">Government Scholarship & DBT Awareness</h1>
+    <p id="subtitle">Learn how DBT can support students' education</p>
+  </header>
+
+  <div class="lang-select">
+    <label for="language">Choose Language: </label>
+    <select id="language" onchange="changeLanguage()">
+      <option value="en">English</option>
+      <option value="ta">தமிழ் (Tamil)</option>
+      <option value="ml">മലയാളം (Malayalam)</option>
+      <option value="kn">ಕನ್ನಡ (Kannada)</option>
+      <option value="te">తెలుగు (Telugu)</option>
+    </select>
+  </div>
+
+  <div class="container">
+  <div class="card">
+  <h2 id="scholarship-title">Scholarship for Students</h2>
+  <p id="scholarship-text">
+    The Government of India provides scholarships to help students from different backgrounds 
+    continue their education without financial difficulties. These scholarships cover tuition 
+    fees, books, and living expenses.
+  </p>
+
+  <details class="scholarship-details">
+    <summary>Click to Know Scholarships</summary>
+    <ul>
+      <li>National Scholarship Portal (NSP) Schemes</li>
+      <li>Central Sector Scheme of Scholarships for College and University Students</li>
+      <li>Post-Matric Scholarship for SC/ST/OBC Students</li>
+      <li>Pragati Scholarship for Girl Students (Technical Education)</li>
+      <li>AICTE Saksham Scholarship for Differently-Abled Students</li>
+      <li>National Means-cum-Merit Scholarship (NMMS)</li>
+      <li>Pre-Matric Scholarships for Minorities</li>
+      <li>Inspire Scholarship for Higher Education (SHE)</li>
+      <div id="scholarship-apply" class="scholarship-apply">
+  <h3>How to apply</h3>
+  <p>Click a button below to apply or get official application details (opens in a new tab).</p>
+
+  <ul class="apply-list" style="list-style:none;padding:0;margin:0;display:grid;gap:8px;">
+    <li>
+      <a class="apply-btn" href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">
+        Apply — National Scholarship Portal (NSP) Schemes
+      </a>
+    </li>
+
+    <li>
+      <a class="apply-btn" href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">
+        Apply — Central Sector Scheme of Scholarships for College and University Students
+      </a>
+    </li>
+
+    <li>
+      <a class="apply-btn" href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">
+        Apply — Post-Matric Scholarship for SC/ST/OBC Students
+      </a>
+    </li>
+
+    <li>
+      <a class="apply-btn" href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">
+        Apply — Pragati Scholarship for Girl Students (Technical Education)
+      </a>
+    </li>
+
+    <li>
+      <a class="apply-btn" href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">
+        Apply — AICTE Saksham Scholarship for Differently-Abled Students
+      </a>
+    </li>
+
+    <li>
+      <a class="apply-btn" href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">
+        Apply — National Means-cum-Merit Scholarship (NMMS)
+      </a>
+    </li>
+
+    <li>
+      <a class="apply-btn" href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">
+        Apply — Pre-Matric Scholarships for Minorities
+      </a>
+    </li>
+
+    <li>
+      <a class="apply-btn" href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">
+        Apply — Inspire Scholarship for Higher Education (SHE)
+      </a>
+    </li>
+    </ul>
+    
+    </ul>
+  </details>
+    </div>
+    <div class="card">
+      <h2 id="dbt-title">What is DBT?</h2>
+      <p id="dbt-text">
+        DBT (Direct Benefit Transfer) ensures that scholarship funds reach students directly 
+        in their bank accounts, avoiding delays and leakages. This helps students 
+        receive their benefits transparently and quickly.
+      </p>
+    </div>
+    <div class="card">
+      <h2 id="benefit-title">Benefits of DBT</h2>
+      <p id="benefit-text">
+        • Direct transfer to bank accounts <br>
+        • Transparency and accountability <br>
+        • No middlemen involved <br>
+        • Faster processing of scholarships
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Government of India | Student Awareness Initiative</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Government Scholarship & DBT Awareness",
+        subtitle: "Learn how DBT can support students' education",
+        scholarshipTitle: "Scholarship for Students",
+        scholarshipText: "The Government of India provides scholarships to help students from different backgrounds continue their education without financial difficulties. These scholarships cover tuition fees, books, and living expenses.",
+        dbtTitle: "What is DBT?",
+        dbtText: "DBT (Direct Benefit Transfer) ensures that scholarship funds reach students directly in their bank accounts, avoiding delays and leakages. This helps students receive their benefits transparently and quickly.",
+        benefitTitle: "Benefits of DBT",
+        benefitText: "• Direct transfer to bank accounts <br> • Transparency and accountability <br> • No middlemen involved <br> • Faster processing of scholarships"
+      },
+      ta: {
+        title: "அரசு உதவித்தொகை & DBT விழிப்புணர்வு",
+        subtitle: "DBT மாணவர்களின் கல்வியை எப்படி ஆதரிக்கிறது என்பதை அறிக",
+        scholarshipTitle: "மாணவர்களுக்கு உதவித்தொகை",
+        scholarshipText: "இந்திய அரசு மாணவர்கள் படிப்பை நிதி சிக்கல்களின்றி தொடர உதவித்தொகைகளை வழங்குகிறது. இது கல்லூரிக் கட்டணம், புத்தகங்கள் மற்றும் வாழ்க்கைச் செலவுகளை கையாள உதவும்.",
+        dbtTitle: "DBT என்றால் என்ன?",
+        dbtText: "DBT (Direct Benefit Transfer) மூலம் உதவித்தொகை தொகை நேரடியாக மாணவர்களின் வங்கி கணக்கிற்கு செல்கிறது. இது தாமதம் இல்லாமல், வெளிப்படையாக நிதி கிடைக்க உதவுகிறது.",
+        benefitTitle: "DBT-ன் நன்மைகள்",
+        benefitText: "• நேரடி வங்கி பரிமாற்றம் <br> • வெளிப்படை மற்றும் பொறுப்புணர்வு <br> • நடுவர் இல்லாமல் <br> • விரைவான செயல்முறை"
+      },
+      ml: {
+        title: "സർക്കാർ സ്കോളർഷിപ്പ് & DBT അവബോധം",
+        subtitle: "DBT വിദ്യാർത്ഥികളുടെ വിദ്യാഭ്യാസത്തെ എങ്ങനെ സഹായിക്കുന്നു എന്ന് മനസിലാക്കൂ",
+        scholarshipTitle: "വിദ്യാർത്ഥികൾക്കുള്ള സ്കോളർഷിപ്പ്",
+        scholarshipText: "ഇന്ത്യൻ സർക്കാർ വിദ്യാർത്ഥികൾക്ക് സാമ്പത്തിക ബുദ്ധിമുട്ടുകൾ കൂടാതെ പഠനം തുടരാൻ സ്കോളർഷിപ്പുകൾ നൽകുന്നു. ഇത് ട്യൂഷൻ ഫീസ്, പുസ്തകങ്ങൾ, ജീവിതച്ചെലവുകൾ എന്നിവ ഉൾക്കൊള്ളുന്നു.",
+        dbtTitle: "DBT എന്താണ്?",
+        dbtText: "DBT (Direct Benefit Transfer) സ്കോളർഷിപ്പ് തുക നേരിട്ട് വിദ്യാർത്ഥികളുടെ ബാങ്ക് അക്കൗണ്ടിലേക്ക് കൈമാറുന്നു. ഇതിലൂടെ സമയബന്ധിതമായും വ്യക്തമായും സഹായം ലഭിക്കും.",
+        benefitTitle: "DBT-യുടെ പ്രയോജനങ്ങൾ",
+        benefitText: "• ബാങ്ക് അക്കൗണ്ടിലേക്ക് നേരിട്ട് <br> • വ്യക്തതയും ഉത്തരവാദിത്വവും <br> • ഇടനിലക്കാരില്ലാതെ <br> • വേഗത്തിലുള്ള പ്രക്രിയ"
+      },
+      kn: {
+        title: "ಸರ್ಕಾರಿ ವಿದ್ಯಾರ್ಥಿವೇತನ ಮತ್ತು DBT ಜಾಗೃತಿ",
+        subtitle: "DBT ವಿದ್ಯಾರ್ಥಿಗಳ ಶಿಕ್ಷಣವನ್ನು ಹೇಗೆ ಬೆಂಬಲಿಸುತ್ತದೆ ಎಂದು ತಿಳಿಯಿರಿ",
+        scholarshipTitle: "ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವಿದ್ಯಾರ್ಥಿವೇತನ",
+        scholarshipText: "ಭಾರತ ಸರ್ಕಾರವು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಆರ್ಥಿಕ ತೊಂದರೆಗಳಿಲ್ಲದೆ ಅವರ ಶಿಕ್ಷಣವನ್ನು ಮುಂದುವರಿಸಲು ವಿದ್ಯಾರ್ಥಿವೇತನಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ. ಇದು ಶುಲ್ಕ, ಪುಸ್ತಕಗಳು ಮತ್ತು ಜೀವನ ವೆಚ್ಚಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.",
+        dbtTitle: "DBT ಎಂದರೆ ಏನು?",
+        dbtText: "DBT (Direct Benefit Transfer) ವಿದ್ಯಾರ್ಥಿವೇತನದ ಮೊತ್ತವನ್ನು ನೇರವಾಗಿ ವಿದ್ಯಾರ್ಥಿಗಳ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ವರ್ಗಿಸುತ್ತದೆ. ಇದು ವಿಳಂಬವಿಲ್ಲದೆ ಮತ್ತು ಪಾರದರ್ಶಕವಾಗಿ ನೆರವು ಒದಗಿಸುತ್ತದೆ.",
+        benefitTitle: "DBT ನ ಪ್ರಯೋಜನಗಳು",
+        benefitText: "• ನೇರ ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ <br> • ಪಾರದರ್ಶಕತೆ ಮತ್ತು ಹೊಣೆಗಾರಿಕೆ <br> • ಮಧ್ಯವರ್ತಿಗಳಿಲ್ಲದೆ <br> • ವೇಗವಾದ ಪ್ರಕ್ರಿಯೆ"
+      },
+      te: {
+        title: "ప్రభుత్వ స్కాలర్‌షిప్ & DBT అవగాహన",
+        subtitle: "DBT విద్యార్థుల విద్యకు ఎలా సహాయపడుతుందో తెలుసుకోండి",
+        scholarshipTitle: "విద్యార్థులకు స్కాలర్‌షిప్",
+        scholarshipText: "భారత ప్రభుత్వం విద్యార్థులు ఆర్థిక సమస్యలు లేకుండా చదువు కొనసాగించేందుకు స్కాలర్‌షిప్‌లు అందిస్తుంది. ఇవి ఫీజులు, పుస్తకాలు, జీవన ఖర్చులను కవర్ చేస్తాయి.",
+        dbtTitle: "DBT అంటే ఏమిటి?",
+        dbtText: "DBT (Direct Benefit Transfer) ద్వారా స్కాలర్‌షిప్ నిధులు విద్యార్థుల బ్యాంక్ ఖాతాలో నేరుగా జమ అవుతాయి. ఇది ఆలస్యం లేకుండా పారదర్శకంగా సహాయం అందిస్తుంది.",
+        benefitTitle: "DBT ప్రయోజనాలు",
+        benefitText: "• నేరుగా బ్యాంక్ ఖాతాకు జమ <br> • పారదర్శకత మరియు బాధ్యత <br> • మధ్యవర్తులు లేకుండా <br> • వేగవంతమైన ప్రాసెసింగ్"
+      }
+    };
+
+    function changeLanguage() {
+      const lang = document.getElementById("language").value;
+      const t = translations[lang];
+
+      document.getElementById("title").innerHTML = t.title;
+      document.getElementById("subtitle").innerHTML = t.subtitle;
+      document.getElementById("scholarship-title").innerHTML = t.scholarshipTitle;
+      document.getElementById("scholarship-text").innerHTML = t.scholarshipText;
+      document.getElementById("dbt-title").innerHTML = t.dbtTitle;
+      document.getElementById("dbt-text").innerHTML = t.dbtText;
+      document.getElementById("benefit-title").innerHTML = t.benefitTitle;
+      document.getElementById("benefit-text").innerHTML = t.benefitText;
+    }
+  </script>
+</body>
+</html>
