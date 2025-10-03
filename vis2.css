@@ -3208,4 +3208,6 @@ body.dark-mode #darkModeToggle {
     padding: 4px 8px;
   }
 }
-
+html{
+  scroll-behavior: smooth;
+}
