@@ -108,6 +108,7 @@ body::after {
 /* Input styling */
 input {
   width: 100%;
+  height: 50px;
   margin: 12px 0;
   padding: 16px 20px;
   border: 2px solid rgba(40, 167, 69, 0.2);
@@ -118,6 +119,7 @@ input {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-sizing: border-box;
   position: relative;
+  bottom: 30px;
 }
 
 input::placeholder {
@@ -179,6 +181,7 @@ button {
   text-transform: uppercase;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
+  bottom: 40px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
 }
@@ -350,7 +353,7 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-/* Invalid input states */
+/* Invalid input states 
 input:invalid:not(:placeholder-shown) {
   border-color: #dc3545;
   box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
@@ -359,6 +362,10 @@ input:invalid:not(:placeholder-shown) {
 input:valid:not(:placeholder-shown) {
   border-color: #28a745;
   box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}*/
+h2{
+  position: relative;
+  bottom: 25px;
 }
   </style>
 </head>
@@ -368,10 +375,12 @@ input:valid:not(:placeholder-shown) {
     <form id="signupForm">
       <input type="text" id="newUsername" placeholder="Choose Username" required>
       <input type="password" id="newPassword" placeholder="Choose Password" required>
-      <!--<input type="email" id="newemail" placeholder="Email id" required>-->
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
-      <button type="submit">Sign Up</button>
+      <input type="email" id="newemail" placeholder="Email id" required>
+      <input type="date" id="newdate" placeholder="Date of Birth" required>
+      <input type="number" id="newage" min="15" max="40" placeholder="Age" required>
+      <input type="tel" id="newno" placeholder="Phonenumber" required>
+      <!--<input type="email" id="email" name="email" placeholder="Enter your email" required>-->
+      <button type="submit" id="sub">Sign Up</button>
     </form>
     <p>Already have an account? <a href="lsigin.html">Sign In</a></p>
   </div>
@@ -382,22 +391,17 @@ input:valid:not(:placeholder-shown) {
 
       const newUser = document.getElementById("newUsername").value;
       const newPass = document.getElementById("newPassword").value;
+      const newe = document.getElementById("newemail").value;
       //const newel = document.getElementById("newemail").value;
 
       // Save to localStorage
       localStorage.setItem("username", newUser);
       localStorage.setItem("password", newPass);
+      localStorage.setItem("newemail", newe)
       //localStorage.setItem("email", newel);
 
       alert("Account created successfully! You can now sign in.");
       window.location.href = "lsigin.html";
-    });
-    // Phone number validation example
-    const phoneInput = document.getElementById("phone");
-    phoneInput.addEventListener("input", function () {
-    if (!/^[0-9]{0,10}$/.test(this.value)) {
-    this.value = this.value.slice(0, -1); // allow only digits
-    }
     });
 
   </script>

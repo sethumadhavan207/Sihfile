@@ -237,7 +237,7 @@ button:focus-visible {
   <img src="foods/logoda.png" width="280px"  style="position: relative; right: 230px; top: -170px; animation: ease-in;" >
   <!--<h2 style="font-family:sans-serif;">FINAWARE</h2>-->
   <div class="container" style="position: relative; left: -120px;">
-    <h2>Welcome Back</h2>
+    <h2 id="hello">Welcome Back</h2>
     <form id="loginForm">
       <input type="text" id="username" placeholder="Enter Username" required>
       <input type="password" id="password" placeholder="Enter Password" required>
@@ -271,7 +271,9 @@ button:focus-visible {
     const user = document.getElementById("username").value;
     const pass = document.getElementById("password").value;
 
-    const storedUser = localStorage.getItem("username");   // from signup
+    const storedUser = localStorage.getItem("username"); 
+    document.getElementById("hello").textContent = `Welcome da mapla`;
+
     const storedPass = localStorage.getItem("password");   // from signup
 
     if (user === storedUser && pass === storedPass) {
